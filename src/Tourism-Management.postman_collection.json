@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "4b4c02dc-c321-42c8-ace1-25103438a787",
+		"name": "Tourism-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39595280"
+	},
+	"item": [
+		{
+			"name": "Attraction",
+			"item": [
+				{
+					"name": "Get request for the single ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  {\r\n    \"name\": \"Eiffel Tower\",\r\n    \"location\": \"Paris\",\r\n    \"entryFee\": 25,\r\n    \"rating\": 4.8,\r\n    \"description\": \"A famous tower in Paris.\"\r\n  }\r\n  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attractions/676e889fec03ee7ded347f21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attractions",
+								"676e889fec03ee7ded347f21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/attractions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"name\": \"Eiffel Tower\",\r\n    \"location\": \"Paris\",\r\n    \"entryFee\": 25,\r\n    \"rating\": 4.8,\r\n    \"description\": \"A famous tower in Paris.\"\r\n  },\r\n  {\r\n    \"name\": \"Colosseum\",\r\n    \"location\": \"Rome\",\r\n    \"entryFee\": 20,\r\n    \"rating\": 4.6,\r\n    \"description\": \"An ancient amphitheater in Rome.\"\r\n  },\r\n  {\r\n    \"name\": \"Great Wall of China\",\r\n    \"location\": \"Beijing\",\r\n    \"entryFee\": 15,\r\n    \"rating\": 4.7,\r\n    \"description\": \"A historic wall built to protect against invasions.\"\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attractions/60d74d9e7f8f7b301b8e4f4d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attractions",
+								"60d74d9e7f8f7b301b8e4f4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/attractions",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/attractions/676e889fec03ee7ded347f21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attractions",
+								"676e889fec03ee7ded347f21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/attractions/676e889fec03ee7ded347f21",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Eiffel Tower\",\r\n  \"location\": \"Paris\",\r\n  \"entryFee\": 30,\r\n  \"rating\": 4.9,\r\n  \"description\": \"Updated description of the Eiffel Tower.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attractions/676e889fec03ee7ded347f21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attractions",
+								"676e889fec03ee7ded347f21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/attractions/676e889fec03ee7ded347f21",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/attractions/676e889fec03ee7ded347f21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attractions",
+								"676e889fec03ee7ded347f21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visitor",
+			"item": [
+				{
+					"name": "http://localhost:3000/visitors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"name\": \"Charlie Brown\",\r\n    \"email\": \"charlie.brown@example.com\",\r\n    \"visitedAttractions\": [\"60d74e4b6d0baf001f0e8c5c\", \"60d74e6b6d0baf001f0e8c5b\"]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/visitors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"visitors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/visitors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/visitors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"visitors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/visitors/676e900556773a9e7de9b17e",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Alice\",\r\n  \"email\": \"alice@example.com\",\r\n  \"visitedAttractions\": [\"60d74e4b6d0baf001f0e8c5b\", \"60d74e6b6d0baf001f0e8c5c\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/visitors/676e900556773a9e7de9b17e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"visitors",
+								"676e900556773a9e7de9b17e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": []
+		}
+	]
+}
